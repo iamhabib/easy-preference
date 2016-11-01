@@ -71,6 +71,32 @@ EasyPreference.with(this)
                 .clearAll();
 ```
 
+# N.B #
+If you use your own preference name by: 
+
+```groovy
+
+EasyPreference.with(this, "YourPrefName")
+ 
+```
+
+You need to add your preference name in every request like this:
+
+```groovy
+EasyPreference.with(this, "YourPrefName")
+                .addBoolean("KEY", booleanValue)
+                .addString("KEY", stringValue)
+                .addInt("KEY", intValue)
+                .addObject("KEY", objectValue)
+                .save();
+```
+```groovy
+boolean value=EasyPreference.with(this, "YourPrefName")
+                       .getBoolean("KEY", defaultValue);
+```
+
+
+
 ##License
 
 Copyright 2016 Habibur Rahman
