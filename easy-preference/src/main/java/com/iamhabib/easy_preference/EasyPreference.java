@@ -17,14 +17,21 @@ public class EasyPreference {
         return new Builder(context);
     }
 
+    public static Builder with(Context context, String prefName) {
+        return new Builder(context, prefName);
+    }
+
     public static class Builder {
         SharedPreferences preferences;
         SharedPreferences.Editor editor;
-        Context context;
 
         public Builder(Context context) {
-            this.context = context;
             preferences = context.getSharedPreferences("EasyPreferencePref", Context.MODE_PRIVATE);
+            editor = preferences.edit();
+        }
+
+        public Builder(Context context, String prefName) {
+            preferences = context.getSharedPreferences(prefName, Context.MODE_PRIVATE);
             editor = preferences.edit();
         }
 

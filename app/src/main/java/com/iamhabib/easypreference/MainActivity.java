@@ -24,7 +24,8 @@ public class MainActivity extends AppCompatActivity {
             value.setText("B: FALSE, "+EasyPreference.with(MainActivity.this).getString("S","")+" "+EasyPreference.with(MainActivity.this).getString("SS",""));
         }
 
-        EasyPreference.with(MainActivity.this)
+        EasyPreference
+                .with(MainActivity.this)
                 .addBoolean("B", true)
                 .addString("S","HABIBUR")
                 .addString("SS", "RAHMAN")
