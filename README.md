@@ -10,12 +10,29 @@ Add below line in app ```build.gradle```
  
 ```gradle
 dependencies {
-	compile 'com.iamhabib:easy-preference:1.0.0'
+	compile 'com.iamhabib:easy-preference:1.0.1'
 }
 ```
 
 ##Code snippets
 ---------------
+
+### Preference initialize option ###
+You can use default preference name by
+
+```groovy
+
+EasyPreference.with(this)
+ 
+```
+
+Use your own preference name
+
+```groovy
+
+EasyPreference.with(this, "YourPrefName")
+ 
+```
 
 ### Adding Value ###
 You can add boolean, int, String, long, Set<String>, float 
