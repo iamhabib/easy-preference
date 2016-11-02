@@ -62,13 +62,15 @@ MyObject object=EasyPreference.with(this)
 ### Removing Value ###
 ```groovy
 EasyPreference.with(this)
-                .remove("KEY");
+                .remove("KEY")
+		.save();;
 ```
 
 ### Clear All Value ###
 ```groovy
 EasyPreference.with(this)
-                .clearAll();
+                .clearAll()
+		.save();
 ```
 
 # N.B #
